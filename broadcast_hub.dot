@@ -1,0 +1,52 @@
+digraph G {
+	label = "Populous Library Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+	
+	{ MHP OFF IDC SP AAR EDC } -> "Broadcast Hub"
+
+	// EDM
+	{ PCB TRA } -> MHP
+
+	// ECA
+	{ GL SOL } -> SP
+	{ CU SI BCO BRO } -> SOL
+
+	// BMP
+	{ PG EPO } -> OFF
+	
+	// CLR
+	{ CAP SWF TRN } -> TRA
+	{ SI FE } -> CAP
+	{ AL SI } -> TRN
+	{ SI AL } -> SWF
+
+	// SCA
+	{ SWF BCO PE BGO } -> PCB
+
+	// ELP
+	{ KV AU PCB SWF } -> AAR
+
+	// WPL
+	{ PG TCL } -> KV
+
+	// LAB
+	{ CL O H } -> TCL
+
+	// FS
+	{ CU PE } -> BCO
+	{ AU FE } -> BGO
+	{ AL CU } -> BRO
+
+	// Pioneers and Settlers
+        EPO, KV, AU, FE, AL, H, O, GL, CL, OFF, PE, SI, CU, BCO, BRO, BGO, PG, MHP [fillcolor=lightgray]
+
+        // Technicians
+        PCB, TRN, SWF, TCL, CAP, TRA, AAR, SOL, SP [fillcolor=lightblue]
+
+        // Scientists
+        IDC, EDC [fillcolor=purple]
+
+        // Engineers
+        // [fillcolor=orange]
+}
