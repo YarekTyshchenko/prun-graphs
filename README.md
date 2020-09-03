@@ -12,7 +12,7 @@ White nodes are resources obtained with Pioneers, gray are Settlers.
 
 Security Drone Post and hospital provide larger boosts but require Engineers:
 
-- Gray nodes: Pioneers
+- Gray nodes: Pioneers and Settlers
 - Blue nodes: Technicians
 - Orange nodes: Engineers
 
