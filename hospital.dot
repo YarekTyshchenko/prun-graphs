@@ -1,0 +1,82 @@
+digraph G {
+	label = "Populous Hospital Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+	
+	{ PK SEQ BND SDR RED BSC } -> "Hospital"
+
+	// ECA
+	{ NCS LI } -> POW
+	{ CU SI BCO BRO } -> SOL
+
+	// DRS
+	{ SAR DCH } -> RED
+	{ SEQ BSC DCH } -> SDR
+
+	// EDM
+	{ DCS HD NG } -> HOG
+
+	// MCA
+	{ RG DCS LDI } -> HD
+
+	// DRS
+	{ MPC POW SOL DRF } -> DCH
+
+	// ELP
+	{ SEN PCB } -> SAR
+
+	// SCA
+	{ TRN H N } -> SEN
+	{ SWF BCO PE BGO } -> PCB
+	{ SWF TRN BCO } -> MPC
+
+	// PHF
+	{ DCM MFK SAR } -> BSC
+	{ NL SIL } -> BND
+	{ HER LI REA } -> PK
+
+	// WEL
+	AL -> DRF
+
+	// CLR
+	C -> NCS
+	{ AL SI } -> TRN
+	{ GAL SI } -> LDI
+	{ SI AL } -> SWF
+
+	// SME
+	{ LIO HAL } -> LI
+
+	// PPF
+	{ PSM SFK PG } -> DCM
+	{ SFK PG PSS } -> DCS
+	PG -> PSS
+	PG -> PSM
+
+	// FS
+	{ CU PE } -> BCO
+	{ AL CU } -> BRO
+	{ AU FE } -> BGO
+	FE -> SFK
+	STL -> MFK
+	{ STL TI HOG } -> SEQ
+
+	// WPL
+	PG -> NL
+	RSI -> SIL
+
+	// GF
+	{ GL NCS } -> NG
+	
+	// Pioneers and Settlers
+        SEQ, GAL, GL, NG, RSI, SIL, NL, HER, RG, REA, STL, AU, FE, AL, H, N, PE, SI, CU, BCO, BGO, BRO, C, LIO, HAL, LI, DCM, PG, PSS, MFK, PSM, DCS, DRF, SFK, HOG, TI [fillcolor=lightgray]
+
+        // Technicians
+        PK, LDI, HD, SEN, PCB, TRN, SWF, NCS, SAR, BSC, POW, SOL, MPC, BND [fillcolor=lightblue]
+
+        // Scientists
+        // [fillcolor=purple]
+
+        // Engineers
+        RED, SDR, DCH [fillcolor=orange]
+}
