@@ -1,0 +1,35 @@
+digraph G {
+	label = "Populous Basics (Safety Station & Infirmary) Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+	
+	{ DW OFF SUN } -> "Safety Station"
+	{ OFF STR TUB } -> "Infirmary"
+
+	subgraph cluster_CHP {
+		label = "CHP"
+		{ HAL H2O } -> { NA CL }
+	}
+	
+	subgraph cluster_POL {
+		label = "POL"
+		{ C H CL O } -> EPO
+		{ H C MG } -> PG
+	}
+
+	subgraph cluster_BMP {
+		label = "BMP"
+		{ PG EPO } -> OFF
+		{ OVE C } -> SUN
+		{ PE AL } -> STR
+	}
+
+	subgraph cluster_GF {
+		label = "GF"
+		GL -> TUB
+		SIO -> GL
+	}
+	
+	// Settlers
+        GL, TUB, NA, CL, PG, EPO [fillcolor=lightgray]
+}
