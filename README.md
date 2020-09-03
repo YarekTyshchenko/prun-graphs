@@ -10,7 +10,7 @@ more efficient use of materials in the end.
 
 White nodes are resources obtained with Pioneers, gray are Settlers.
 
-And to support Technicians the basic building is Art Cafe:
+And to support Engineers the basic building is Art Cafe:
 
 ![Art Cafe](art_cafe.png)
 
