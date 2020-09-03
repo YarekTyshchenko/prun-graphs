@@ -1,0 +1,67 @@
+digraph G {
+	label = "Populous Security Drone Post Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+	
+	{ POW CCD RAD SUD } -> "Security\nDrone\nPost"
+
+	// ECA
+	{ NCS LI } -> POW
+	{ CU SI BCO BRO } -> SOL
+
+	// DRS
+	{ BSC DCH } -> CCD
+
+	// EDM
+	{ DCS SFK POW } -> RAD
+
+	// DRS
+	{ SAR BSC DCH } -> SUD
+	{ MPC POW SOL DRF } -> DCH
+
+	// ELP
+	{ SEN PCB } -> SAR
+
+	// SCA
+	{ TRN H N } -> SEN
+	{ SWF BCO PE BGO } -> PCB
+	{ SWF TRN BCO } -> MPC
+
+	// PHF
+	{ DCM MFK SAR } -> BSC
+
+	// WEL
+	AL -> DRF
+
+	// CLR
+	C -> NCS
+	{ AL SI } -> TRN
+
+	// SME
+	{ LIO HAL } -> LI
+
+	// PPF
+	{ PSM SFK PG } -> DCM
+	{ SFK PG PSS } -> DCS
+	PG -> PSS
+	PG -> PSM
+
+	// FS
+	{ CU PE } -> BCO
+	{ AL CU } -> BRO
+	{ AU FE } -> BGO
+	FE -> SFK
+	STL -> MFK
+	
+	// Pioneers and Settlers
+        STL, AU, FE, AL, H, N, PE, SI, CU, BCO, BGO, BRO, C, LIO, HAL, LI, DCM, PG, PSS, MFK, PSM, DCS, RAD, DRF, SFK [fillcolor=lightgray]
+
+        // Technicians
+        SEN, PCB, TRN, SWF, NCS, SAR, BSC, CCD, SUD, DCH, POW, SOL, MPC [fillcolor=lightblue]
+
+        // Scientists
+        //CNN, RNN, FNN, WAI [fillcolor=purple]
+
+        // Engineers
+        // [fillcolor=orange]
+}
