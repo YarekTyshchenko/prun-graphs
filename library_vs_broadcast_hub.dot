@@ -1,0 +1,82 @@
+digraph G {
+	label = "Populous Library vs Broadcast Hub Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+	
+	{ MHP OFF IDC SP AAR EDC } -> "Broadcast Hub"
+	{ MHP HOG BID CD DIS } -> "Library"
+
+	// ECA
+	{ GL SOL } -> SP
+	{ CU SI BCO BRO } -> SOL
+
+	// BMP
+	{ PG EPO } -> OFF
+	
+	// ELP
+	{ KV AU PCB SWF } -> AAR
+
+	// FS
+	{ AL CU } -> BRO
+
+	// EDM
+	{ PCB TRA } -> MHP
+	{ DCS HD NG } -> HOG
+	{ SAR CD KV } -> BID
+
+	// CLR
+	{ CAP SWF TRN } -> TRA
+	{ SI FE } -> CAP
+	{ AL SI } -> TRN
+	{ GAL SI } -> LDI
+	{ SI AL } -> SWF
+	C -> NCS
+
+	// SCA
+	{ SWF BCO PE BGO } -> PCB
+	{ TRN H N } -> SEN
+
+	// PPF
+	{ SFK PG PSS } -> DCS
+
+	// MCA
+	{ RG DCS LDI } -> HD
+	{ LCR GL } -> DIS
+
+	// GF
+	{ GL NCS } -> NG
+	{ GL PG } -> RG
+	
+	// ELP
+	{ SEN PCB } -> SAR
+	{ DIS FE PE } -> CD
+
+	// WPL
+	{ PG TCL } -> KV
+
+	// LAB
+	{ CL O H } -> TCL
+
+	// CHP
+	{ SI O } -> LCR
+
+	// FS
+	{ CU PE } -> BCO
+	{ AU FE } -> BGO
+	FE -> SFK
+
+	// PPF
+	PG -> PSS
+
+	// Pioneers and Settlers
+        EPO, OFF, BRO, KV, AU, FE, AL, H, N, O, GAL, GL, CL, RG, NG, PE, SI, CU, BCO, BGO, C, PG, PSS, DCS, SFK, HOG, BID, MHP, LCR [fillcolor=lightgray]
+
+        // Technicians
+        CAP, AAR, SOL, SP, SEN, PCB, TRN, SWF, NCS, SAR, CD, DIS, LDI, TCL, HD, CAP, TRA [fillcolor=lightblue]
+
+        // Scientists
+        IDC, EDC [fillcolor=purple]
+
+        // Engineers
+        // [fillcolor=orange]
+}
