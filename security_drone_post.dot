@@ -1,5 +1,5 @@
 digraph G {
-	label = "Populous Security Drone Post Mats (Version 0.1)"
+	label = "Populous Security Drone Post Mats (Version 0.2)"
 	rankdir=LR
 	node [style=filled fillcolor=white]
 	
@@ -57,11 +57,11 @@ digraph G {
         STL, AU, FE, AL, H, N, PE, SI, CU, BCO, BGO, BRO, C, LIO, HAL, LI, DCM, PG, PSS, MFK, PSM, DCS, RAD, DRF, SFK [fillcolor=lightgray]
 
         // Technicians
-        SEN, PCB, TRN, SWF, NCS, SAR, BSC, CCD, SUD, DCH, POW, SOL, MPC [fillcolor=lightblue]
+        SEN, PCB, TRN, SWF, NCS, SAR, BSC, POW, SOL, MPC [fillcolor=lightblue]
 
         // Scientists
-        //CNN, RNN, FNN, WAI [fillcolor=purple]
+        // [fillcolor=purple]
 
         // Engineers
-        // [fillcolor=orange]
+        CCD, DCH, SUD [fillcolor=orange]
 }
