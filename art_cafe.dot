@@ -1,0 +1,40 @@
+digraph G {
+	label = "Populous Art Cafe Mats (Version 0.1)"
+	rankdir=LR
+	node [style=filled fillcolor=white]
+
+	{ COF OLF VIT DW GL DEC } -> "Art Cafe"
+	
+	subgraph cluster_CHP {
+		label = CHP
+		{ VEG REA } -> OLF
+		BRM -> REA
+	}
+
+	subgraph cluster_FER {
+		label = FER
+		{ VEG PPA NUT ALG } -> VIT
+	}
+
+	subgraph cluster_GF {
+		label = GF
+		SIO -> GL
+	}
+
+	subgraph cluster_POL {
+		label = POL
+		{ PG EPO } -> DEC
+	}
+	
+	// Pioneers and Settlers
+        COF, VEG, REA, BRM, VEG, PPA, NUT, ALG, DW, SIO, GL, PG, EPO, DEC, OLF, VIT [fillcolor=lightgray]
+
+        // Technicians
+        // [fillcolor=lightblue]
+
+        // Scientists
+        // [fillcolor=purple]
+
+        // Engineers
+        // [fillcolor=orange]
+}
