@@ -5,21 +5,25 @@ digraph G {
     
     // Scientists
     node [fillcolor=purple]
-    ENG RCT
+    ENG RCT // SPF
     
     // Engineers
     node [fillcolor=orange]
-    FFC
+    FFC ACS RCS // APF
+    FET AST // ASM
     
     // Technicians
     node [fillcolor=lightblue]
     BHP // HWP
     MFE SFE // CLR
     SSL SCB SFL // SKF
+    RAG CBS // ECA
+    ETC // TNP
     
     // Settlers
     node [fillcolor=lightgray]
-    BR1 CQS
+    BR1 CQS // UPF
+    BFR // FS
     
     // Pio only (default)
     node [fillcolor=white]
@@ -41,11 +45,23 @@ digraph G {
     { CF CBS } -> SFE
     // APF
     { W WAI DA BMF } -> FFC
+    { WAI SAR FC THF } -> ACS
+    { BWS OS SAR DA } -> RCS
     // UPF
     { PSL PSM FET NV1 SAR COM } -> BR1
     { PSL PSM FAL LTS DEC TCU } -> CQS
     // HWP
     { AL STL HE } -> BHP
-
-    
+    // ASM
+    { FE TI } -> FET
+    { AL TI } -> AST
+    // ECA
+    { ETC BFR CF ACS RCS AST } -> RAG
+    { LI BE BCO PG } -> CBS
+    // TNP
+    { TC REA FLX } -> ETC
+    // FS
+    { STL AL } -> BFR
+    // SME
+    { AL SI } -> CF
 }
