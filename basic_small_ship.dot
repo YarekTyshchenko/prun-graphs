@@ -1,0 +1,51 @@
+digraph G {
+    label = "Ignition Basic Small Ship Mats (Version 1)"
+    rankdir=LR
+    node [style=filled]
+    
+    // Scientists
+    node [fillcolor=purple]
+    ENG RCT
+    
+    // Engineers
+    node [fillcolor=orange]
+    FFC
+    
+    // Technicians
+    node [fillcolor=lightblue]
+    BHP // HWP
+    MFE SFE // CLR
+    SSL SCB SFL // SKF
+    
+    // Settlers
+    node [fillcolor=lightgray]
+    BR1 CQS
+    
+    // Pio only (default)
+    node [fillcolor=white]
+
+    // Ship itself
+    { BHP BR1 CQS ENG FFC MFE RCT SCB SFE SFL SSC SSL } -> "Basic Small Ship"
+    
+    // SKF
+    { FET MFK } -> SSL
+    { FAL MFK } -> SCB
+    { ZR MFK } -> SFL
+    // WEL
+    { NFI AL HE } -> SSC
+    // SPF
+    { BFP NOZ AST ACS MFK } -> ENG
+    { RAG AST CBS } -> RCT
+    // CLR
+    { CF CBM } -> MFE
+    { CF CBS } -> SFE
+    // APF
+    { W WAI DA BMF } -> FFC
+    // UPF
+    { PSL PSM FET NV1 SAR COM } -> BR1
+    { PSL PSM FAL LTS DEC TCU } -> CQS
+    // HWP
+    { AL STL HE } -> BHP
+
+    
+}
