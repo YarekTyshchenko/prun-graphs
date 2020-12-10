@@ -1,4 +1,4 @@
-digraph G {
+digraph SME {
 
     { 
         node [shape=plaintext, fontsize=16];
