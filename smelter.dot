@@ -1,0 +1,28 @@
+digraph G {
+
+    { 
+        node [shape=plaintext, fontsize=16];
+        ore -> element -> metal -> textiles;
+    }
+
+    label = "Smelter";
+    node [style=dotted]
+    FLX
+    node [style=filled,fillcolor=white];
+
+    { rank=same; ore ALO FEO CUO TIO SIO LIO HAL TS};
+    { rank=same; element C };
+    { rank=same; metal CU TI FE AL CU LI SI STL};
+    { rank=same; textiles CF };
+    { ALO C O } -> AL
+    { ALO O C FLX } -> AL
+    { FEO C O } -> FE
+    { FEO C O FLX } -> FE
+    { CUO O SIO } -> CU
+    { TS O AL } -> SI
+    { LIO HAL } -> LI
+    { FE O } -> STL
+    { TIO C O } -> TI
+    { SIO AL } -> SI
+    { AL SI O } -> CF
+}
