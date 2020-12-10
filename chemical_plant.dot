@@ -1,0 +1,29 @@
+digraph CHP {
+
+    { 
+        node [shape=plaintext, fontsize=16];
+        inputs -> element -> chemical -> consumable;
+    }
+
+    label = "Chemical Plant";
+    
+    node [style=filled,fillcolor=white];
+
+    { rank=same; inputs SI O N HAL H2O LST MG CU S CLI BRM VEG AMM PE AL COT HER }
+    { rank=same; element CL CA NA };
+    { rank=same; chemical LCR SOI IND OLF REA PFE NS FLX};
+    { rank=same; consumable SC MED };
+
+    { SI O } -> LCR
+    { CLI BRM } -> SOI
+    { MG CU S } -> IND
+    { VEG REA } -> OLF
+    BRM -> REA
+    { CA MG TA } -> SC
+    { AMM REA } -> PFE
+    LST -> CA
+    { H2O N LST } -> NS
+    LST -> FLX
+    { HAL H2O } -> {NA CL}
+    { PE AL COT HER } -> MED
+}
