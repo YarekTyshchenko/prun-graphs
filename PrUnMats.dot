@@ -1,0 +1,1085 @@
+digraph PrUn {
+    rankdir=LR
+    label = "Prosperous Universe Resource Map"
+    nodesep=0.2
+    ratio=autp
+    { 
+        node [shape=plaintext, fontsize=16];
+        "Natural Resource";
+    }
+
+    node [style=filled,fillcolor=white];
+
+    { rank=min; BTS H2O LES HEX }; //Liquid
+    { rank=min; BER BRM BOR CLI GAL HAL LST MG MAG S TAI TCO TS ZIR }; //Mineral
+    { rank=min; ALO CUO AUO FEO LIO SIO TIO }; // Ores
+    { rank=min; AMM AR F HE HE3 H NE N O}; // Gas
+
+    subgraph cluster_AAF {
+        label = AAF;
+
+        FC->CC
+        GV->CC
+        PCB->CC
+        SAR->CC
+        THF->CC
+        WAI->CC
+        CST->CRU
+        ES->CRU
+        FC->CRU
+        FLP->CRU
+        PCB->CRU
+        SAR->CRU
+        WAI->CRU
+        BMF->NV2
+        SNM->NV2
+        TPU->STS
+        WAI->STS
+        BMF->TAC
+        DA->TAC
+        SA->TAC
+    }
+
+    subgraph cluster_AML {
+        label = AML
+
+        BER -> {BE AL SI}
+        AL -> BOS
+        BOR -> BOS
+        SI -> BOS
+        TAI -> {TA FE}
+        BTS -> W
+        ZIR -> { ZR SI }
+    } 
+
+    subgraph cluster_APF {
+        label = APF
+
+        FC -> ACS
+        SAR -> ACS
+        THF -> ACS
+        WAI -> ACS
+        BWS -> ADS
+        OS -> ADS
+        TRA -> ADS
+        BAC -> AIR
+        FC -> AIR
+        GV -> AIR
+        H2O -> AIR
+        HCP -> AIR
+        NS -> AIR
+        PCB -> AIR
+        SAR -> AIR
+        WAI -> AIR
+        AAR -> COM
+        BWS -> COM
+        RAD -> COM
+        BMF -> FFC
+        DA -> FFC
+        W -> FFC
+        WAI -> FFC
+        AIR -> LIS
+        BMF -> LIS
+        WAI -> LIS
+        WR -> LIS
+        BMF -> LOG
+        LD -> LOG
+        SAL -> LOG
+        SNM -> NV1
+        WS -> NV1
+        DA -> PDA
+        HPC -> PDA
+        BWS -> RCS
+        DA -> RCS
+        OS -> RCS
+        SAR -> RCS
+        AWF -> WR
+        FC -> WR
+        FLP -> WR
+        PCB -> WR
+        SEN -> WR
+        WAI -> WR
+        BWS -> WS
+        DA -> WS
+    }
+
+    subgraph cluster_ASM {
+        label = ASM
+
+        AL -> AST
+        TI -> AST
+        O -> CTF
+        SI -> CTF
+        WAL -> CTF
+        AL -> FAL
+        FE -> FAL
+        FE -> FET
+        TI -> FET
+        AL -> WAL
+        W -> WAL
+    }
+
+    subgraph cluster_BMP {
+        label = BMP
+
+        AL -> EXO
+        OVE -> EXO
+        CLI -> I
+        LST -> MCG
+        SIO -> MCG
+        EPO -> OFF
+        PG -> OFF
+        COT -> "OVE-COT-PG" -> OVE
+        PG -> "OVE-COT-PG"
+        PE -> "OVE-PE-PG" -> OVE
+        PG -> "OVE-PE-PG"
+        PE -> "OVE-PE-RCO" -> OVE
+        RCO -> "OVE-PE-RCO"
+        C -> PE
+        H -> PE
+        STL -> PT
+        COT -> PWO
+        PG -> PWO
+        INS -> REP
+        MFK -> REP
+        SFK -> REP
+        PG -> SEA
+        S -> SEA
+        SI -> SEA
+        AL -> STR
+        PE -> STR
+        C -> SUN
+        OVE -> SUN
+    }
+
+    subgraph cluster_CHP {
+        label = CHP
+
+        LST -> CA
+        LST -> FLX
+        CU -> IND
+        MG -> IND
+        S -> IND
+        O -> LCR
+        SI -> LCR
+        AL -> MED
+        COT -> MED
+        HER -> MED
+        PE -> MED
+        H2O -> { NA CL }
+        HAL -> { NA CL }
+        H2O -> NS
+        LST -> NS
+        N -> NS
+        REA -> OLF
+        VEG -> OLF
+        AMM -> PFE
+        REA -> PFE
+        BRM -> REA
+        CA -> SC
+        MG -> SC
+        TA -> SC
+        BRM -> SOI
+        CLI -> SOI
+    }
+
+    subgraph cluster_CLF {
+        label = CLF
+
+        GC -> HMS
+        IND -> HMS
+        NL -> HMS
+        BLE -> HSS
+        NL -> HSS
+        PCB -> HSS
+        SEN -> HSS
+        BLE -> LC
+        HD -> LC
+        PCB -> LC
+        SIL -> LC
+    }
+
+    subgraph cluster_CLR {
+        label = CLR
+
+        FE -> CAP
+        SI -> CAP
+        GAL -> LDI
+        SI -> LDI
+        CBM -> MFE
+        CF -> MFE
+        NCS -> MTC
+        AL -> MWF
+        SI -> MWF
+        C -> NCS
+        C -> NFI
+        SI -> NFI
+        CBS -> SFE
+        CF -> SFE
+        AL -> SWF
+        SI -> SWF
+        CAP -> TRA
+        SWF -> TRA
+        TRN -> TRA
+        AL -> TRN
+        SI -> TRN
+    }
+
+    subgraph cluster_DRS {
+        label = DRS
+
+        BSC -> CCD
+        DCH -> CCD
+        DRF -> DCH
+        MPC -> DCH
+        POW -> DCH
+        SOL -> DCH
+        DCS -> DRF
+        NFI -> DRF
+        DCH -> RED
+        SAR -> RED
+        BSC -> SDR
+        DCH -> SDR
+        SEQ -> SDR
+        DCH -> SRD
+        SAR -> SRD
+        UTS -> SRD
+        BSC -> SUD
+        DCH -> SUD
+        SAR -> SUD
+    }
+
+    subgraph cluster_ECA {
+        label = ECA
+
+        BE -> CBL
+        HCC -> CBL
+        LI -> CBL
+        PG -> CBL
+        BE -> CBM
+        BGC -> CBM
+        LI -> CBM
+        PG -> CBM
+        BCO -> CBS
+        BE -> CBS
+        LI -> CBS
+        PG -> CBS
+        ACS -> FIR
+        AFR -> FIR
+        CTF -> FIR
+        EES -> FIR
+        RCS -> FIR
+        WAL -> FIR
+        LI -> POW
+        NCS -> POW
+        ACS -> RAG
+        AST -> RAG
+        BFR -> RAG
+        CF -> RAG
+        ETC -> RAG
+        RCS -> RAG
+        BCO -> SOL
+        BRO -> SOL
+        CU -> SOL
+        SI -> SOL
+        GL -> SP
+        SOL -> SP
+    }
+
+    subgraph cluster_EDM {
+        label = EDM
+
+        CD -> BID
+        KV -> BID
+        SAR -> BID
+        DCS -> HOG
+        HD -> HOG
+        NG -> HOG
+        PCB -> MHP
+        TRA -> MHP
+        DCS -> RAD
+        POW -> RAD
+        SFK -> RAD
+        CU -> SCN
+        PE -> SCN
+    }
+
+    subgraph cluster_EEP {
+        label = EEP
+
+        ES -> EES
+        FLX -> EES
+        REA -> EES
+        LES -> ES
+    }
+
+    subgraph cluster_ELP {
+        label = ELP
+
+        AU -> AAR
+        KV -> AAR
+        PCB -> AAR
+        SWF -> AAR
+        BAC -> AWF
+        MAG -> AWF
+        PE -> AWF
+        DCL -> BMF
+        FAN -> BMF
+        MB -> BMF
+        TPU -> BMF
+        DCM -> BWS
+        HD -> BWS
+        MB -> BWS
+        BCO -> CD
+        DIS -> CD
+        CD -> HPC
+        DCS -> HPC
+        MB -> HPC
+        CBL -> LFE
+        CTF -> LFE
+        PCB -> SAR
+        SEN -> SAR
+    }
+
+    subgraph cluster_FER {
+        label = FER
+
+        AMM -> ALE
+        DW -> ALE
+        GRN -> ALE
+        HOP -> ALE
+        AMM -> GIN
+        DW -> GIN
+        ES -> GIN
+        GRN -> GIN
+        AMM -> KOM
+        DW -> KOM
+        HER -> KOM
+        AMM -> VIT
+        CA -> VIT
+        DW -> VIT
+        I -> VIT
+        PIB -> VIT
+        AMM -> WIN
+        DW -> WIN
+        GRA -> WIN
+        REA -> WIN
+    }
+
+    subgraph cluster_FP {
+        label = FP
+        { rank=max; DW };
+        ordering=out
+
+        CAF -> COF
+        DW -> COF
+        H2O -> "DW-H2O" -> DW
+        H2O -> "DW-H2O-PG" -> DW
+        PG -> "DW-H2O-PG"
+        HER -> FIM
+        RAT -> FIM
+        MAI -> FOD
+        NUT -> FOD
+        VEG -> FOD
+        FIM -> MEA
+        MTP -> MEA
+        ALG -> "PPA-ALG-BEA-H2O" -> PPA
+        BEA -> "PPA-ALG-BEA-H2O"
+        H2O -> "PPA-ALG-BEA-H2O"
+        ALG -> "PPA-ALG-H2O" -> PPA
+        H2O -> "PPA-ALG-H2O"
+        BEA -> "PPA-BEA-H2O" -> PPA
+        H2O -> "PPA-BEA-H2O"
+        ALG -> "RAT-ALG-GRN-NUT" -> RAT
+        GRN -> "RAT-ALG-GRN-NUT"
+        NUT -> "RAT-ALG-GRN-NUT"
+        ALG -> "RAT-ALG-GRN-VEG" -> RAT
+        GRN -> "RAT-ALG-GRN-VEG"
+        VEG -> "RAT-ALG-GRN-VEG"
+        ALG -> "RAT-ALG-MAI-NUT" -> RAT
+        MAI -> "RAT-ALG-MAI-NUT"
+        NUT -> "RAT-ALG-MAI-NUT"
+        ALG -> "RAT-ALG-MAI-VEG" -> RAT
+        MAI -> "RAT-ALG-MAI-VEG"
+        VEG -> "RAT-ALG-MAI-VEG"
+        BEA -> "RAT-BEA-GRN-NUT" -> RAT
+        GRN -> "RAT-BEA-GRN-NUT"
+        NUT -> "RAT-BEA-GRN-NUT"
+        BEA -> "RAT-BEA-GRN-VEG" -> RAT
+        GRN -> "RAT-BEA-GRN-VEG"
+        VEG -> "RAT-BEA-GRN-VEG"
+        BEA -> "RAT-BEA-MAI-NUT" -> RAT
+        MAI -> "RAT-BEA-MAI-NUT"
+        NUT -> "RAT-BEA-MAI-NUT"
+        BEA -> "RAT-BEA-MAI-VEG" -> RAT
+        MAI -> "RAT-BEA-MAI-VEG"
+        VEG -> "RAT-BEA-MAI-VEG"
+        GRN -> "RAT-GRN-MUS-NUT" -> RAT
+        MUS -> "RAT-GRN-MUS-NUT"
+        NUT -> "RAT-GRN-MUS-NUT"
+        GRN -> "RAT-GRN-MUS-VEG" -> RAT
+        MUS -> "RAT-GRN-MUS-VEG"
+        VEG -> "RAT-GRN-MUS-VEG"
+        MAI -> "RAT-MAI-MUS-NUT" -> RAT
+        MUS -> "RAT-MAI-MUS-NUT"
+        NUT -> "RAT-MAI-MUS-NUT"
+        MAI -> "RAT-MAI-MUS-VEG" -> RAT
+        MUS -> "RAT-MAI-MUS-VEG"
+        VEG -> "RAT-MAI-MUS-VEG"
+    }
+
+    subgraph cluster_FRM {
+        label = FRM
+
+        H2O -> "BEA-H2O-1" -> BEA
+        H2O -> "BEA-H2O-2" -> BEA
+        H2O -> "GRN-H2O-1" -> GRN
+        H2O -> "GRN-H2O-2" -> GRN
+        H2O -> HCP
+        DDT -> HER
+        H2O -> HER
+        H2O -> MAI
+        H2O -> NUT
+        H2O -> "RCO-H2O" -> RCO
+        H2O -> "RCO-H2O-NS" -> RCO
+        NS -> "RCO-H2O-NS" -> RCO
+        H2O -> VEG
+    }
+
+    subgraph cluster_FS {
+        label = FS
+
+        AL -> AFR
+        ZR -> AFR
+        CU -> BCO
+        PE -> BCO
+        AL -> BFR
+        STL -> BFR
+        BGO -> BGC
+        PE -> BGC
+        AU -> BGO
+        FE -> BGO
+        AL -> BRO
+        CU -> BRO
+        AL -> FLO
+        STL -> FLO
+        PE -> HCC
+        RGO -> HCC
+        STL -> MFK
+        AU -> RGO
+        CU -> RGO
+        HOG -> SEQ
+        STL -> SEQ
+        TI -> SEQ
+        FE -> SFK
+        FE -> UTS
+        SFK -> UTS
+    }
+
+    subgraph cluster_GF {
+        label = GF
+
+        SIO -> GL
+        NE -> LIT
+        RG -> LIT
+        GL -> NG
+        NCS -> NG
+        GL -> RG
+        PG -> RG
+        GL -> TUB
+    }
+
+    subgraph cluster_HWP {
+        label = HWP
+
+        AL -> AHP
+        FET -> AHP
+        HE -> AHP
+        BOS -> ATP
+        CTF -> ATP
+        HE -> ATP
+        CTF -> AWH
+        HE -> AWH
+        TI -> AWH
+        TK -> AWH
+        AL -> BHP
+        HE -> BHP
+        STL -> BHP
+        CF -> BWH
+        FAL -> BWH
+        HE -> BWH
+        KV -> BWH
+        AL -> HHP
+        AST -> HHP
+        HE -> HHP
+        AL -> LHP
+        HE -> LHP
+        AL -> RHP
+        HE -> RHP
+        TI -> RHP
+    }
+
+    subgraph cluster_HYF {
+        label = HYF
+
+        H2O -> ALG
+        NS -> ALG
+        H2O -> CAF
+        NS -> CAF
+        H2O -> HCP
+        NS -> HCP
+        NS -> "MUS-NS-1" -> MUS
+        NS -> "MUS-NS-2" -> MUS
+        H2O -> RCO
+        NS -> RCO
+        H2O -> VEG
+        NS -> VEG
+    }
+
+    subgraph cluster_INC {
+        label = INC
+
+        GRN -> "C-GRN" -> C
+        GRN -> "C-GRN-HCP" -> C
+        HCP -> "C-GRN-HCP"
+        GRN -> "C-GRN-HCP-MAI" -> C
+        HCP -> "C-GRN-HCP-MAI"
+        MAI -> "C-GRN-HCP-MAI"
+        HCP -> "C-HCP" -> C
+        HCP -> "C-HCP-MAI" -> C
+        MAI -> "C-HCP-MAI"
+        MAI -> "C-MAI" -> C
+    }
+
+    subgraph cluster_IVP {
+        label = IVP
+
+        HCP -> MTP
+        NS -> MTP
+        PPA -> MTP
+        H2O -> RSI
+        HCP -> RSI
+        NS -> RSI
+        BAC -> VG
+        BL -> VG
+        REA -> VG
+        VIT -> VG
+    }
+
+    subgraph cluster_LAB {
+        label = LAB
+
+        HCP -> BAC
+        O -> BAC
+        S -> BAC
+        F -> BL
+        O -> BL
+        CL -> BLE
+        NA -> BLE
+        O -> BLE
+        DW -> CST
+        NS -> CST
+        C -> DDT
+        CL -> DDT
+        H -> DDT
+        BL -> JUI
+        CST -> JUI
+        HEX -> JUI
+        PK -> JUI
+        EPO -> NR
+        NCS -> NR
+        ALG -> NST
+        ES -> NST
+        THF -> NST
+        CL -> TCL
+        H -> TCL
+        O -> TCL
+        AMM -> THF
+        H2O -> THF
+        NA -> THF
+    }
+
+    subgraph cluster_MCA {
+        label = MCA
+
+        GL -> DIS
+        LCR -> DIS
+        AL -> FAN
+        DCS -> FAN
+        SFK -> FAN
+        DCS -> HD
+        LDI -> HD
+        RG -> HD
+        MPC -> MB
+        PSM -> MB
+        RAM -> MB
+        SFK -> MB
+    }
+
+    subgraph cluster_ORC {
+        label = ORC
+
+        DDT -> GRA
+        H2O -> GRA
+        DDT -> HOP
+        H2O -> HOP
+        DDT -> PIB
+        H2O -> PIB
+    }
+
+    subgraph cluster_PHF {
+        label = PHF
+
+        BSC -> ADR
+        DCM -> ADR
+        MFK -> ADR
+        REA -> ADR
+        NL -> BND
+        SIL -> BND
+        DCM -> BSC
+        MFK -> BSC
+        SAR -> BSC
+        CA -> PK
+        LI -> PK
+        REA -> PK
+    }
+
+    subgraph cluster_POL {
+        label = POL
+
+        EPO -> DEC
+        PG -> DEC
+        C -> EPO
+        CL -> EPO
+        H -> EPO
+        O -> EPO
+        C -> PG
+        H -> PG
+        MG -> PG
+    }
+
+    subgraph cluster_PP1 {
+        label = PP1
+
+        FE -> BBH
+        LST -> BBH
+        PE -> BDE
+        FE -> BSE
+        LST -> BSE
+        FE -> BTA
+        PE -> BTA
+    }
+
+    subgraph cluster_PP2 {
+        label = PP2
+
+        NE -> AEF
+        PG -> AEF
+        AL -> BBH
+        LST -> BBH
+        PG -> BDE
+        AL -> BSE
+        LST -> BSE
+        AL -> BTA
+        GL -> BTA
+        AL -> LBH
+        PE -> LBH
+        AL -> LDE
+        NL -> LDE
+        AL -> LSE
+        PG -> LSE
+        AL -> LTA
+        GL -> LTA
+    }
+
+    subgraph cluster_PP3 {
+        label = PP3
+
+        LSE -> HSE
+        TCS -> HSE
+        AR -> INS
+        PE -> INS
+        THF -> INS
+        LDE -> MGC
+        MAG -> MGC
+        NFI -> PSH
+        TI -> PSH
+        BBH -> RBH
+        EPO -> RBH
+        STL -> RBH
+        EPO -> RDE
+        KV -> RDE
+        LDE -> RDE
+        BSE -> RSE
+        EPO -> RSE
+        STL -> RSE
+        LTA -> RTA
+        RG -> RTA
+    }
+
+    subgraph cluster_PP4 {
+        label = PP4
+
+        NR -> ABH
+        RBH -> ABH
+        KV -> ADE
+        LDE -> ADE
+        RSE -> ASE
+        TI -> ASE
+        NG -> ATA
+        RTA -> ATA
+        LST -> RSH
+        STL -> RSH
+        TA -> RSH
+        LBH -> TSH
+        PE -> TSH
+        THP -> TSH
+    }
+
+    subgraph cluster_PPF {
+        label = PPF
+
+        MFK -> DCL
+        PG -> DCL
+        PSL -> DCL
+        PG -> DCM
+        PSM -> DCM
+        SFK -> DCM
+        PG -> DCS
+        PSS -> DCS
+        SFK -> DCS
+        PG -> PSL
+        PG -> PSM
+        PG -> PSS
+    }
+
+    subgraph cluster_REF {
+        label = REF
+
+        H -> FF
+        HE3 -> FF
+        TS -> HE3
+        AMM -> SF
+        GAL -> SF
+        H -> SF
+    }
+
+    subgraph cluster_SCA {
+        label = SCA
+
+        BCO -> MPC
+        SWF -> MPC
+        TRN -> MPC
+        BCO -> PCB
+        BGO -> PCB
+        PE -> PCB
+        SWF -> PCB
+        BCO -> RAM
+        CAP -> RAM
+        PSS -> RAM
+        BGC -> ROM
+        PSS -> ROM
+        SI -> ROM
+        H -> SEN
+        N -> SEN
+        TRN -> SEN
+        CAP -> TPU
+        HCC -> TPU
+        MWF -> TPU
+        TRN -> TPU
+    }
+
+    subgraph cluster_SE {
+        label = SE
+
+        LD -> DA
+        ROM -> DA
+        SA -> DA
+        SAL -> DA
+        LD -> DD
+        NF -> DD
+        BAI -> NN
+        MLI -> NN
+        LD -> OS
+        ROM -> OS
+        WM -> OS
+    }
+
+    subgraph cluster_SKF {
+        label = SFK
+
+        AST -> LCB
+        MFK -> LCB
+        MFK -> LFL
+        ZR -> LFL
+        FET -> LSL
+        MFK -> LSL
+        AST -> MCB
+        MFK -> MCB
+        MFK -> MFL
+        ZR -> MFL
+        FET -> MSL
+        MFK -> MSL
+        FAL -> SCB
+        MFK -> SCB
+        MFK -> SFL
+        ZR -> SFL
+        FET -> SSL
+        MFK -> SSL
+        FE -> TCB
+        MFK -> TCB
+        FET -> VCB
+        MFK -> VCB
+        FE -> VSC
+        MFK -> VSC
+        AST -> WCB
+        FET -> WCB
+        MFK -> WCB
+    }
+
+    subgraph cluster_SL {
+        label = SL
+
+        DA -> IMM
+        DD -> IMM
+        DV -> SNM
+        IMM -> SNM
+        WAI -> SNM
+        NN -> WAI
+        ROM -> WAI
+    }
+
+    subgraph cluster_SME {
+        label = SME
+
+        ALO -> "AL-ALO-C-FLX-O" -> AL
+        C -> "AL-ALO-C-FLX-O"
+        FLX -> "AL-ALO-C-FLX-O"
+        O -> "AL-ALO-C-FLX-O"
+        ALO -> "AL-ALO-C-O" -> AL
+        C -> "AL-ALO-C-O"
+        O -> "AL-ALO-C-O"
+        AUO -> AU
+        C -> AU
+        AL -> CF
+        O -> CF
+        SI -> CF
+        CUO -> CU
+        O -> CU
+        SIO -> CU
+        C -> "FE-C-FEO-FLX-O"
+        FEO -> "FE-C-FEO-FLX-O" -> FE
+        FLX -> "FE-C-FEO-FLX-O"
+        O -> "FE-C-FEO-FLX-O"
+        C -> "FE-C-FEO-O"
+        FEO -> "FE-C-FEO-O" -> FE
+        O -> "FE-C-FEO-O"
+        HAL -> LI
+        LIO -> LI
+        AL -> "SI-AL-O-TS"
+        O -> "SI-AL-O-TS"
+        TS -> "SI-AL-O-TS" -> SI
+        AL -> "SI-AL-SIO"
+        SIO -> "SI-AL-SIO" -> SI
+        FE -> STL
+        O -> STL
+        C -> TI
+        O -> TI
+        TIO -> TI
+    }
+
+    subgraph cluster_SPF {
+        label = SPF
+
+        ACS -> AEN
+        AFP -> AEN
+        ANZ -> AEN
+        FET -> AEN
+        MFK -> AEN
+        ATP -> AFP
+        PG -> AFP
+        SFK -> AFP
+        CHA -> ANZ
+        FET -> ANZ
+        MFK -> ANZ
+        PG -> BFP
+        SFK -> BFP
+        THP -> BFP
+        ACS -> ENG
+        AST -> ENG
+        BFP -> ENG
+        MFK -> ENG
+        NOZ -> ENG
+        ACS -> FSE
+        BFP -> FSE
+        BRO -> FSE
+        MFK -> FSE
+        NOZ -> FSE
+        CHA -> HNZ
+        MFK -> HNZ
+        WAL -> HNZ
+        CBM -> HPR
+        FIR -> HPR
+        STL -> HPR
+        ACS -> HTE
+        AFP -> HTE
+        HNZ -> HTE
+        MFK -> HTE
+        WAL -> HTE
+        CBL -> HYR
+        FIR -> HYR
+        WAL -> HYR
+        CHA -> NOZ
+        FAL -> NOZ
+        MFK -> NOZ
+        BGO -> QCR
+        CBS -> QCR
+        RAG -> QCR
+        AST -> RCT
+        CBS -> RCT
+        RAG -> RCT
+    }
+
+    subgraph cluster_SPP {
+        label = SPP
+
+        AST -> AGS
+        PG -> AGS
+        TK -> AGS
+        ATP -> APT
+        THF -> APT
+        LST -> ARP
+        TK -> ARP
+        FAL -> BGS
+        KV -> BGS
+        PG -> BGS
+        THF -> BPT
+        THP -> BPT
+        KV -> BRP
+        LST -> BRP
+        LST -> SRP
+        TA -> SRP
+        W -> SRP
+    }
+
+    subgraph cluster_TNP {
+        label = TNP
+
+        FLX -> ETC
+        REA -> ETC
+        TC -> ETC
+        TCO -> {TC O}
+        TC -> TCS
+    }
+
+    subgraph cluster_UPF {
+        label = UPF
+
+        COM -> BR1
+        FET -> BR1
+        NV1 -> BR1
+        PSL -> BR1
+        PSM -> BR1
+        SAR -> BR1
+        COM -> BR2
+        FET -> BR2
+        NV2 -> BR2
+        PSL -> BR2
+        PSM -> BR2
+        SAR -> BR2
+        DEC -> CQL
+        FET -> CQL
+        LIS -> CQL
+        PSL -> CQL
+        PSM -> CQL
+        TCU -> CQL
+        DEC -> CQM
+        LIS -> CQM
+        PSL -> CQM
+        PSM -> CQM
+        TCU -> CQM
+        TI -> CQM
+        DEC -> CQS
+        FAL -> CQS
+        LIS -> CQS
+        PSL -> CQS
+        PSM -> CQS
+        TCU -> CQS
+        COM -> DOU
+        PSL -> DOU
+        SAR -> DOU
+        BID -> FUN
+        BWS -> FUN
+        PCB -> FUN
+        PSL -> FUN
+        BBH -> HAB
+        BDE -> HAB
+        BSE -> HAB
+        SOI -> HAB
+        DA -> LU
+        PSL -> LU
+        PSM -> LU
+        WS -> LU
+        PSL -> RDL
+        PSM -> RDL
+        SRD -> RDL
+        PSL -> RDS
+        PSM -> RDS
+        SRD -> RDS
+        BSC -> SU
+        NG -> SU
+        PSL -> SU
+        PSM -> SU
+        SEQ -> SU
+        ADR -> TCU
+        PSL -> TCU
+        PSM -> TCU
+        PSL -> WOR
+        PSM -> WOR
+        UTS -> WOR
+    }
+
+    subgraph cluster_WEL {
+        label = WEL
+
+        BOS -> CHA
+        GV -> CHA
+        HE -> CHA
+        AL -> DRF
+        HE -> DRF
+        AL -> FC
+        BSE -> FC
+        HE -> FC
+        AL -> FLP
+        FE -> FLP
+        HE -> FLP
+        AL -> GC
+        FE -> GC
+        HE -> GC
+        AL -> GV
+        HE -> GV
+        FE -> MHL
+        HE -> MHL
+        I -> MHL
+        AL -> SSC
+        HE -> SSC
+        NFI -> SSC
+        BE -> THP
+        CF -> THP
+        HE -> THP
+        AL -> TRU
+        HE -> TRU
+    }
+
+    subgraph cluster_WPL {
+        label = WPL
+
+        RCO -> COT
+        PG -> KV
+        TCL -> KV
+        PG -> NL
+        RSI -> SIL
+        KV -> TK
+        TC -> TK
+    }
+}
