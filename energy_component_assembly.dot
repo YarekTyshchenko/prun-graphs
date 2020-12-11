@@ -1,0 +1,18 @@
+digraph ECA {
+        rankdir=LR
+    label = "Energy Component Assembly";
+    
+    node [style=filled,fillcolor=cornflowerblue]
+    SOL CBL POW SP CBS CBM
+
+    node [fillcolor=white];
+
+    { CU SI BCO BRO } -> SOL
+    { LI BE HSS PG } -> CBL
+    { NCS LI } -> POW
+    { GL SOL } -> SP
+    { ETC BFR CF ACS RCS AST } -> RAG
+    { LI BR BCO PG } -> CBS
+    { LI BE BGC PG } -> CBM
+    { EES AFR CTF ACS RCS WAL } -> FIR
+}
