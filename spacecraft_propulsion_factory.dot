@@ -1,0 +1,25 @@
+digraph SPF {
+    rankdir=LR
+    label = "Ship Propulsion Factory";
+    
+    node [style=filled,fillcolor=darkolivegreen]
+    HPR HYR AEN FSE NOZ ANZ AFP QCR RCT HNZ ENG HTE BFP
+
+    //{ rank=same; "ship engines" HPR HYR AEN FSE NOZ ANZ AFP QCR RCT HNZ ENG HTE BFP };
+
+    node [fillcolor=white];
+
+    { FIR STL CBM } -> HPR
+    { FIR WAL CBL } -> HYR
+    { AFP ANZ FET ACS MFK } -> AEN
+    { BFP NOZ BRO ACS MFK } -> FSE
+    { FAL MFK CHA } -> NOZ
+    { FET MFK CHA } -> ANZ
+    { SFK PG ATP } -> AFP
+    { RAG BGO CBS } -> QCR
+    { RAG AST CBS } -> RCT
+    { WAL MFK CHA } -> HNZ
+    { BFP NOZ AST ACS MFK } -> ENG
+    { AFP HNZ WAL ACS MFK } -> HTE
+    { SFK PG THP } -> BFP
+}
