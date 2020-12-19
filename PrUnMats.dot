@@ -8,12 +8,28 @@ digraph PrUn {
         "Natural Resource";
     }
 
-    node [style=filled,fillcolor=white];
+    node [style=filled];
 
+    /*
+    Suggested by Gladi
+
+    pioneer - white
+    settler - green
+    tech - blue
+    engineers - purple
+    scientiests - orange
+    */
+
+    node [fillcolor = green]
     { rank=min; BTS H2O LES HEX }; //Liquid
     { rank=min; BER BRM BOR CLI GAL HAL LST MG MAG S TAI TCO TS ZIR }; //Mineral
     { rank=min; ALO CUO AUO FEO LIO SIO TIO }; // Ores
     { rank=min; AMM AR F HE HE3 H NE N O}; // Gas
+    
+    node [fillcolor = blue]
+    node [fillcolor = purple]
+    node [fillcolor = orange]
+    node [fillcolor = white]
 
     subgraph cluster_AAF {
         label = AAF;
