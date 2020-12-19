@@ -4,7 +4,7 @@ digraph NV1 {
 
     node [style=filled]
     node [fillcolor=white, fontcolor=black] //pioneers
-    { rank=min; AL FE SI PE CU AU};
+    { rank=min; AL FE SI PE CU AU GAL};
 
     node [fillcolor=green, fontcolor=black] //settlers
     { rank=min; PG };
