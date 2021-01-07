@@ -8,7 +8,6 @@ digraph PrUn {
         "Natural Resource";
     }
 
-    node [style=filled];
 
     /*
     Suggested by Gladi
@@ -19,21 +18,25 @@ digraph PrUn {
     engineers - purple
     scientiests - orange
     */
+    node [fillcolor = white, fontcolor = black] //pioneers
+    node [fillcolor = green, fontcolor = black] //settlers
+    node [fillcolor = blue,  fontcolor = white] //technicians
+    node [fillcolor = purple,fontcolor = black] //engineers
+    node [fillcolor = orange,fontcolor = black] //scientists
+    
+    node [shape=plaintext, fontsize = 16]
+    pioneers -> settlers -> technicians -> engineers -> scientists
 
-    node [fillcolor = green]
+    node [shape=ellipse, style=filled, fillcolor=white];
     { rank=min; BTS H2O LES HEX }; //Liquid
     { rank=min; BER BRM BOR CLI GAL HAL LST MG MAG S TAI TCO TS ZIR }; //Mineral
     { rank=min; ALO CUO AUO FEO LIO SIO TIO }; // Ores
     { rank=min; AMM AR F HE HE3 H NE N O}; // Gas
     
-    node [fillcolor = blue]
-    node [fillcolor = purple]
-    node [fillcolor = orange]
-    node [fillcolor = white]
 
     subgraph cluster_AAF {
         label = AAF;
-
+        node [fillcolor = orange,fontcolor = black] //scientists
         FC->CC
         GV->CC
         PCB->CC
@@ -58,7 +61,7 @@ digraph PrUn {
 
     subgraph cluster_AML {
         label = AML
-
+        node [fillcolor = purple,fontcolor = black] //engineers
         BER -> {BE AL SI}
         AL -> BOS
         BOR -> BOS
@@ -70,7 +73,7 @@ digraph PrUn {
 
     subgraph cluster_APF {
         label = APF
-
+        node [fillcolor = purple,fontcolor = black] //engineers
         FC -> ACS
         SAR -> ACS
         THF -> ACS
@@ -121,7 +124,7 @@ digraph PrUn {
 
     subgraph cluster_ASM {
         label = ASM
-
+        node [fillcolor = purple,fontcolor = black] //engineers
         AL -> AST
         TI -> AST
         O -> CTF
@@ -137,7 +140,7 @@ digraph PrUn {
 
     subgraph cluster_BMP {
         label = BMP
-
+        node [fillcolor = white, fontcolor = black] //pioneers
         AL -> EXO
         OVE -> EXO
         CLI -> I
@@ -170,7 +173,7 @@ digraph PrUn {
 
     subgraph cluster_CHP {
         label = CHP
-
+        node [fillcolor = green, fontcolor = black] //settlers
         LST -> CA
         LST -> FLX
         CU -> IND
@@ -201,7 +204,7 @@ digraph PrUn {
 
     subgraph cluster_CLF {
         label = CLF
-
+        node [fillcolor = green, fontcolor = black] //settlers
         GC -> HMS
         IND -> HMS
         NL -> HMS
@@ -217,7 +220,7 @@ digraph PrUn {
 
     subgraph cluster_CLR {
         label = CLR
-
+        node [fillcolor = blue,  fontcolor = white] //technicians
         FE -> CAP
         SI -> CAP
         GAL -> LDI
@@ -464,7 +467,7 @@ digraph PrUn {
 
     subgraph cluster_FS {
         label = FS
-
+        node [fillcolor=green, fontcolor=black] //settlers
         AL -> AFR
         ZR -> AFR
         CU -> BCO
