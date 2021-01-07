@@ -1,4 +1,4 @@
-digraph G {
+digraph SmallShip {
     label = "Ignition Basic Small Ship Mats (Version 1)"
     rankdir=LR
     node [style=filled]
@@ -64,4 +64,6 @@ digraph G {
     { STL AL } -> BFR
     // SME
     { AL SI } -> CF
+    { HAL LIO } -> LI
+    
 }
