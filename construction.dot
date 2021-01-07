@@ -1,0 +1,129 @@
+digraph construction {
+    label = "Construction Tree"
+    rankdir = LR
+    nodesep = 0.2
+    ranksep = 2
+    
+    // INPUTS
+    node [style=filled]
+    node [fillcolor=white, fontcolor=black] //pioneers
+    { rank=min; AL FE PE LST HE CLI SIO STL TI MAG AR NE CF};
+    node [fillcolor=green, fontcolor=black] //settlers
+    { rank=same; PG EPO GL RG NG KV NL };
+    node [fillcolor=blue,fontcolor=white] //technicians
+    { rank=same; NR TCS THF NFI }
+    node [fillcolor = purple, fontcolor = black] //engineers
+    { rank=same; TA BE}
+    node [fillcolor = orange, fontcolor=black] //scientists
+
+    //default
+    node [fillcolor=white, fontcolor=black]
+
+    subgraph cluster_BMP {
+        label = BMP
+        node [fillcolor = white, fontcolor = black] //pioneers
+        CLI -> I
+        LST -> MCG
+        SIO -> MCG
+    }
+
+    // subgraph cluster_FS {
+    //     label = FS
+    //     node [fillcolor=green, fontcolor=black] //settlers
+    //     CU -> BCO
+    //     PE -> BCO
+    //     BGO -> BGC
+    //     PE -> BGC
+    //     AU -> BGO
+    //     FE -> BGO
+    // }
+
+    subgraph cluster_WEL {
+        label = WEL
+
+        FE -> MHL
+        HE -> MHL
+        I -> MHL
+        AL -> TRU
+        HE -> TRU
+        BE -> THP
+        CF -> THP
+        HE -> THP
+    }
+    
+    subgraph cluster_PPF {
+        label = PPF
+        node [fillcolor=green, fontcolor=black] //settlers
+        // PG -> DCM
+        // PSM -> DCM
+        // SFK -> DCM
+        // PG -> DCS
+        // PSS -> DCS
+        // SFK -> DCS
+        PG -> PSL
+        // PG -> PSM
+        // PG -> PSS
+    }
+
+    subgraph cluster_PP1 {
+        label = PP1
+        FE -> BBH
+        LST -> BBH
+        PE -> BDE
+        FE -> BSE
+        LST -> BSE
+        FE -> BTA
+        PE -> BTA
+    }
+
+    subgraph cluster_PP2 {
+        label = PP2
+        node [fillcolor=green, fontcolor=black] //settlers
+        AL -> LBH
+        PE -> LBH
+        AL -> LDE
+        NL -> LDE
+        AL -> LSE
+        PG -> LSE
+        AL -> LTA
+        GL -> LTA
+        { PE NE } -> AEF
+    }
+
+    subgraph cluster_PP3 {
+        label = PP3
+        node [fillcolor=blue,fontcolor=white] //technicians
+        BBH -> RBH
+        EPO -> RBH
+        STL -> RBH
+        EPO -> RDE
+        KV -> RDE
+        LDE -> RDE
+        BSE -> RSE
+        EPO -> RSE
+        STL -> RSE
+        LTA -> RTA
+        RG -> RTA
+        LSE -> HSE
+        TCS -> HSE
+        { PE THF AR } -> INS
+        { MAG LDE } -> MGC
+        { NFI TI } -> PSH
+    }
+
+    subgraph cluster_PP4 {
+        label = PP4
+        node [fillcolor = purple, fontcolor = black] //engineers
+        NR -> ABH
+        RBH -> ABH
+        KV -> ADE
+        LDE -> ADE
+        RSE -> ASE
+        TI -> ASE
+        NG -> ATA
+        RTA -> ATA
+        { TA STL LST } -> RSH
+        { PE LBH THP } -> TSH
+    }
+
+}
