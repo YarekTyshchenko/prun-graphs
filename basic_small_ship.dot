@@ -4,16 +4,17 @@ digraph SmallShip {
     node [style=filled]
     
     // Scientists
-    node [fillcolor=purple]
+    node [fillcolor = orange, fontcolor=black] //scientists
+
     ENG RCT // SPF
     
     // Engineers
-    node [fillcolor=orange]
+    node [fillcolor = purple, fontcolor = black] //engineers
     FFC ACS RCS // APF
     FET AST // ASM
     
     // Technicians
-    node [fillcolor=lightblue]
+    node [fillcolor=blue,fontcolor=white] //technicians
     BHP // HWP
     MFE SFE // CLR
     SSL SCB SFL // SKF
@@ -21,7 +22,7 @@ digraph SmallShip {
     ETC // TNP
     
     // Settlers
-    node [fillcolor=lightgray]
+    node [fillcolor=green, fontcolor=black] //settlers
     BR1 CQS // UPF
     BFR // FS
     
