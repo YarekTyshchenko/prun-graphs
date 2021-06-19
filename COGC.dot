@@ -1,0 +1,149 @@
+digraph COGC {
+    label = "COGC Construction"
+    rankdir=LR
+
+    node [style=filled]
+    node [fillcolor=white, fontcolor=black] //pioneers
+    { rank=min; AL FE SI PE CU AU GAL STL};
+
+    node [fillcolor=green, fontcolor=black] //settlers
+    { rank=min; PG };
+    {LBH LDE LSE LTA}
+    node [fillcolor=blue,fontcolor=white] //technicians
+    node [fillcolor = purple, fontcolor = black] //engineers
+    node [fillcolor = orange, fontcolor=black] //scientists
+
+    //default
+    node [fillcolor=white, fontcolor=black]
+
+    subgraph cluster_GF {
+        label = GF
+        node [fillcolor = green, fontcolor = black] //settlers
+        GL -> RG
+        PG -> RG
+    }
+
+    subgraph cluster_FS {
+        label = FS
+        node [fillcolor = green, fontcolor = black] //settlers
+        { rank=same; BCO BGC SFK };
+        CU -> BCO
+        PE -> BCO
+        { AU FE } -> BGO
+        BGO -> BGC
+        PE -> BGC
+        FE -> SFK
+        STL -> MFK
+        RGO -> HCC
+        PE -> HCC
+        AU -> BRO
+        CU -> BRO
+    }
+
+    subgraph cluster_CLR {
+        label = CLR
+       node [fillcolor = blue,fontcolor = white] //technicians
+
+        FE -> CAP
+        SI -> CAP
+        GAL -> LDI
+        SI -> LDI
+
+        AL -> SWF
+        SI -> SWF
+        AL -> TRN
+        SI -> TRN
+        SI -> MWF
+        AL -> MWF
+    }
+
+    subgraph cluster_PPF {
+        label = PPF
+        node [fillcolor = green, fontcolor = black] //settlers
+        PG -> DCM
+        PSM -> DCM
+        SFK -> DCM
+        PG -> DCS
+        PSS -> DCS
+        SFK -> DCS
+        PG -> PSM
+        PG -> PSS
+
+        PSL -> DCL
+        MFK -> DCL
+        PG -> DCL
+    }
+
+    subgraph cluster_SCA {
+        label = SCA
+        node [fillcolor = blue,fontcolor = white] //technicians
+
+        BCO -> MPC
+        SWF -> MPC
+        TRN -> MPC
+
+        BCO -> RAM
+        CAP -> RAM
+        PSS -> RAM
+
+        MWF -> TPU
+        TRN -> TPU
+        CAP -> TPU
+        HCC -> TPU
+    }
+
+    subgraph cluster_MCA {
+        label = MCA
+        node [fillcolor = blue,fontcolor = white] //technicians
+
+        DCS -> HD
+        LDI -> HD
+        RG -> HD
+        MPC -> MB
+        PSM -> MB
+        RAM -> MB
+        SFK -> MB
+
+        AL -> FAN
+        DCS -> FAN
+        SFK -> FAN
+    }
+
+    subgraph cluster_ECA {
+        label = ECA
+        node [fillcolor = blue,fontcolor = white] //technicians
+
+        GL -> SP
+        SOL -> SP
+
+        CU -> SOL
+        SI -> SOL
+        BCO -> SOL
+        BRO -> SOL
+    }
+
+    subgraph cluster_ELP {
+        label = ELP
+        node [fillcolor = blue,fontcolor = white] //technicians
+        DCM -> BWS
+        HD -> BWS
+        MB -> BWS
+
+        TPU -> BMF
+        FAN -> BMF
+        MB -> BMF
+        DCL -> BMF
+    }
+
+    subgraph cluster_COGC {
+        label = GOCG
+        LBH -> COGC
+        LDE -> COGC
+        LSE -> COGC
+        LTA -> COGC
+        BMF -> COGC
+        SP -> COGC
+        BWS -> COGC
+    }
+
+}
